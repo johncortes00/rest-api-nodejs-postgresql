@@ -31,7 +31,7 @@ const pool = new Pool({
 const getUsers = async (req,res)=>{
     try
     {
-        const response = await client.query('SELECT * FROM users');
+        const response = await pool.query('SELECT * FROM users');
         res.status(200).json(response.rows);
     }
     catch(error){
@@ -39,20 +39,6 @@ const getUsers = async (req,res)=>{
         res.send("Error: "+error);
     }
 };
-
-/*const getUsers = async (req,res)=>{
-    try
-    {
-        const client = await pool.connect();
-        const response = await pool.query('SELECT * FROM users');
-        res.status(200).json(response.rows);
-        client.release();
-    }
-    catch(error){
-        console.log(error);
-        res.send("Error: "+error);
-    }
-};*/
 
 const getUserById = async(req,res) => {
     //res.send('User ID: '+req.params.id);
