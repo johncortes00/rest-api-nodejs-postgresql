@@ -8,5 +8,5 @@ app.use(express.urlencoded({extended:false}));
 //routes
 app.use(require('./routes/index'));
 
-app.listen(4000);
+app.listen(process.env.PORT||4000);
 console.log('Server on port 4000');
