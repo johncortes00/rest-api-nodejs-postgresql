@@ -28,7 +28,9 @@ const pool = new Pool({
 });*/
 
 const client = new Client({
-    connectionString:  process.env.DATABASE_URL || 'postgresql://postgres:admin@localhost:5432/firstapi'//,
+    connectionString:  process.env.DATABASE_URL || 'postgres://pjzctxhhmmjihs:4f530bd1f33704ec276fc03b2cbf6d276c2f5b06b4888174e20cfbbd6f3c09fa@ec2-54-84-98-18.compute-1.amazonaws.com:5432/de32m1ulevipsc'
+    //'postgresql://postgres:admin@localhost:5432/firstapi'
+    //,
     //ssl:{rejectUnauthorized:false}
 });
 
