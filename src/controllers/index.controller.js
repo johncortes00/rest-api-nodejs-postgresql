@@ -1,5 +1,4 @@
 const { Pool } = require('pg');
-const {Client} = require('pg');
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL|| 'postgres://postgres:admin@localhost:5432/firstapi',
