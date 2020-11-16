@@ -1,31 +1,24 @@
 const { Pool } = require('pg');
 const {Client} = require('pg');
 
-/*const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,// || 'postgres://pjzctxhhmmjihs:4f530bd1f33704ec276fc03b2cbf6d276c2f5b06b4888174e20cfbbd6f3c09fa@ec2-54-84-98-18.compute-1.amazonaws.com:5432/de32m1ulevipsc',
-    ssl: process.env.DATABASE_URL ? true : false
-})*/
-
-/*const pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-    ssl: {
-      rejectUnauthorized: false
-    }
-  });*/
-
 const pool = new Pool({
-    /*host:'localhost',
+    connectionString: process.env.DATABASE_URL|| 'postgres://postgres:admin@localhost:5432/firstapi',
+    ssl: process.env.DATABASE_URL ? true : false
+})
+
+/*const pool = new Pool({
+    host:'localhost',
     user:'postgres',
     password:'admin',
     database:'firstapi',
-    port:'5432'*/
+    port:'5432'
 
     host:'ec2-18-210-180-94.compute-1.amazonaws.com',
     user:'jnmhnljrbwetzi',
     password:'347543ac0f88b620add1065304fa29bae9873f7aef80671073fca9475b793671',
     database:'d7hal1t1b8r19',
     port:'5432'
-});
+});*/
 
 
 const getUsers = async (req,res)=>{
