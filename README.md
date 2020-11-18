@@ -20,7 +20,7 @@ NPM Packages used in this project
 
 # Resource Descriptions
 
-<b>List all users<b>
+<b>List all users</b>
 <br><br> GET /users/
 <br> Get all users registered
 <br><br> Query Parameters
@@ -29,10 +29,10 @@ NPM Packages used in this project
 <br> HTTP Status 200
 <br> An array of users
 <br><br> users TYPE object[]
-<br> id TYPE integer
-<br> name TYPE string
-<br> email TYPE string
-<br> List an specific user
+<br>&#9;id TYPE integer
+<br>&#9;name TYPE string
+<br>&#9;email TYPE string
+<br><br> List an specific user
 <br><br> GET /users/{id} Get information about
 <br> POST /users/
 <br> DELETE /users/{id}
