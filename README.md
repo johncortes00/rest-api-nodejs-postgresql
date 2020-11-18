@@ -1,6 +1,6 @@
 # REST API built with Node.js, Express.js and PostgreSQL
 
-The goal of this project is to build a REST API using Node.js, Express.js and PostgreSQL.
+The goal of this project is to build a REST API using Node.js, Express.js and PostgreSQL. For this project I created a table called Users which has three columns id, name and email.
 NPM Packages used in this project
 
 # You will learn this:
@@ -14,6 +14,26 @@ NPM Packages used in this project
 
 # Modules used:
 
-<br>express: web framework for node
-<br>pg: connection driver for PostgreSQL relational database
-<br>nodemon: module used to automatically restart the application when a change is made
+<br> express: web framework for node
+<br> pg: connection driver for PostgreSQL relational database
+<br> nodemon: module used to automatically restart the application when a change is made
+
+# Resource Descriptions
+
+<b>List all users<b>
+<br><br> GET /users/
+<br> Get all users registered
+<br><br> Query Parameters
+<br> None
+<br><br> Success response
+<br> HTTP Status 200
+<br> An array of users
+<br><br> users TYPE object[]
+<br> id TYPE integer
+<br> name TYPE string
+<br> email TYPE string
+<br> List an specific user
+<br><br> GET /users/{id} Get information about
+<br> POST /users/
+<br> DELETE /users/{id}
+<br> PUT /users/{id}
